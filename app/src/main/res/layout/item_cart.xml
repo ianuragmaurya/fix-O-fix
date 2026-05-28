@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="7dp"
+    app:cardCornerRadius="17dp"
+    android:layout_margin="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/imgCartProduct"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtItemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp"
+            android:text="Hodie"
+            app:layout_constraintStart_toEndOf="@+id/imgCartProduct"
+            app:layout_constraintTop_toTopOf="@id/imgCartProduct"
+            app:layout_constraintEnd_toStartOf="@+id/btnDeleteItem"/>
+
+        <TextView
+            android:id="@+id/txtCartPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$66"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/txtItemName"
+            app:layout_constraintTop_toBottomOf="@+id/txtItemName"/>
+
+<LinearLayout
+    android:id="@+id/layoutQty"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal"
+    android:padding="2dp"
+    android:background="@drawable/bg_qty_circle"
+    app:layout_constraintBottom_toBottomOf="@id/imgCartProduct"
+    app:layout_constraintEnd_toStartOf="@+id/btnDeleteItem">
+
+
+    <ImageView
+        android:id="@+id/btnMinus"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_minus"/>
+
+    <TextView
+        android:id="@+id/txtQty"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/btnPlus"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:src="@drawable/ic_plus"/>
+
+</LinearLayout>
+        <ImageView
+            android:id="@+id/btnDeleteItem"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

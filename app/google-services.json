@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "595295529232",
+    "project_id": "lapcart-99e1c",
+    "storage_bucket": "lapcart-99e1c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595295529232:android:564d65adba4eaf57a55d95",
+        "android_client_info": {
+          "package_name": "com.am.lapcart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595295529232-3lo9o5f7nlje5cicrtlpmcv4j4e8ld08.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.am.lapcart",
+            "certificate_hash": "3659a4510e207306091f325b1d52583b991ce62c"
+          }
+        },
+        {
+          "client_id": "595295529232-edufnt2jvpih0gpo8p2gl1b8b3e4io0t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBPdqMzHPFPnXokGE8pnHcyUMDZ0wbugA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595295529232-edufnt2jvpih0gpo8p2gl1b8b3e4io0t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,121 @@
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textColor="#1A1A1A"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Full Name"
+            android:background="@drawable/edt_bg"
+            android:padding="14dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="14dp"/>
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Email Address"
+            android:background="@drawable/edt_bg"
+            android:padding="14dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="14dp"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:id="@+id/edtPhone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Phone Number"
+            android:background="@drawable/edt_bg"
+            android:padding="14dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="14dp"
+            android:inputType="phone"/>
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Password"
+            android:background="@drawable/edt_bg"
+            android:padding="14dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="14dp"
+            android:inputType="textPassword"/>
+
+        <EditText
+            android:id="@+id/edtAddress"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Address"
+            android:background="@drawable/edt_bg"
+            android:padding="14dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="14dp"/>
+
+        <EditText
+            android:id="@+id/edtCity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="City"
+            android:background="@drawable/edt_bg"
+            android:padding="14dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="14dp"/>
+
+        <EditText
+            android:id="@+id/edtState"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="State"
+            android:background="@drawable/edt_bg"
+            android:padding="14dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="14dp"/>
+
+        <EditText
+            android:id="@+id/edtPincode"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Pincode"
+            android:background="@drawable/edt_bg"
+            android:padding="14dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="22dp"
+            android:inputType="number"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Register"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@drawable/btn_bg"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
