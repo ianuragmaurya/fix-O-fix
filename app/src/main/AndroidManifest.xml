@@ -22,7 +22,7 @@
         android:theme="@style/Theme.LapCart">
 
         <service
-            android:name=".MyFirebaseMessagingService"
+            android:name=".services.MyFirebaseMessagingService"
             android:exported="false">
 
             <intent-filter>
@@ -32,11 +32,11 @@
         </service>
 
         <activity
-            android:name=".FirebaseLoginActivity"
+            android:name=".activities.FirebaseLoginActivity"
             android:exported="false"/>
 
         <activity
-            android:name=".FirebaseRegisterActivity"
+            android:name=".activities.FirebaseRegisterActivity"
             android:exported="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -45,33 +45,27 @@
     </activity>
 
         <activity
-            android:name=".SplashActivity"
+            android:name=".activities.SplashActivity"
             android:exported="false" />
         <activity
-            android:name=".InfoActivity"
+            android:name=".activities.InfoActivity"
             android:exported="false" />
         <activity
-            android:name=".FirstActivity"
+            android:name=".activities.FirstActivity"
             android:exported="false" />
         <activity
-            android:name=".ServiceDetailsActivity"
+            android:name=".activities.ServiceDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".ServiceActivity"
+            android:name=".activities.ServiceActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:exported="false" />
 
-       <!-- <meta-data
+        <meta-data
             android:name="com.razorpay.ApiKey"
-            android:value="rzp_test_Sg0tQZLis21V4G" /> -->
+            android:value="rzp_test_Sg0tQZLis21V4G" />
 
     </application>
 

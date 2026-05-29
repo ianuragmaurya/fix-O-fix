@@ -1,4 +1,4 @@
-package com.am.lapcart
+package com.am.lapcart.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,12 +9,17 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.airbnb.lottie.LottieAnimationView
+import com.am.lapcart.api.ApiClient
+import com.am.lapcart.adapters.CategoryAdapter
+import com.am.lapcart.models.CategoryModel
+import com.am.lapcart.models.CategoryResponse
+import com.am.lapcart.R
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class HomeFragment : Fragment () {
+class HomeFragment : Fragment() {
 
     lateinit var rvRecycler: RecyclerView
     lateinit var category: CategoryAdapter

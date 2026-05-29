@@ -1,20 +1,24 @@
-package com.am.lapcart
+package com.am.lapcart.activities
 
 import android.os.Bundle
 import android.view.View
 import android.widget.FrameLayout
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.airbnb.lottie.LottieAnimationView
+import com.am.lapcart.api.ApiClient
+import com.am.lapcart.R
+import com.am.lapcart.adapters.ServiceAdapter
+import com.am.lapcart.models.ServiceModel
+import com.am.lapcart.models.ServiceResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class ServiceActivity : AppCompatActivity() {
-
     lateinit var adapter: ServiceAdapter
     lateinit var rvService: RecyclerView
     lateinit var loaderLayout: FrameLayout
@@ -28,7 +32,7 @@ var list = ArrayList<ServiceModel>()
 
         setContentView(R.layout.activity_service)
 
-        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbarServices)
+        val toolbar = findViewById<Toolbar>(R.id.toolbarServices)
         setSupportActionBar(toolbar)
         supportActionBar?.title = "Services"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -57,7 +61,7 @@ var list = ArrayList<ServiceModel>()
         lottieLoaders.playAnimation()
 
 
-        ApiClient.getApi().getServices(categoryId).enqueue(object : Callback<ServiceResponse>{
+        ApiClient.getApi().getServices(categoryId).enqueue(object : Callback<ServiceResponse> {
 
             override fun onResponse(
                 call: Call<ServiceResponse>,

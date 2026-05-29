@@ -1,6 +1,4 @@
-package com.am.lapcart
-
-
+package com.am.lapcart.activities
 
 import android.Manifest
 import android.content.Intent
@@ -15,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.am.lapcart.MyApplication
+import com.am.lapcart.R
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -140,12 +140,11 @@ class FirebaseRegisterActivity : AppCompatActivity() {
                     val bundle = Bundle().apply {
                         putString(FirebaseAnalytics.Param.METHOD, "email")
                     }
-                    MyApplication.analytics.logEvent(FirebaseAnalytics.Event.SIGN_UP, bundle)
+                    MyApplication.Companion.analytics.logEvent(FirebaseAnalytics.Event.SIGN_UP, bundle)
 
 
                     Toast.makeText(this, "Register Successful", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this, FirebaseLoginActivity::class.java))
-                    finish()
+                    startActivity(Intent(this, MainActivity::class.java))
 
                 } else {
 
@@ -170,7 +169,7 @@ class FirebaseRegisterActivity : AppCompatActivity() {
                         putString(FirebaseAnalytics.Param.METHOD, "google")
 
                     }
-                    MyApplication.analytics.logEvent(
+                    MyApplication.Companion.analytics.logEvent(
                         FirebaseAnalytics.Event.SIGN_UP, bundle
                     )
 

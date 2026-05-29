@@ -1,11 +1,12 @@
-package com.am.lapcart
+package com.am.lapcart.activities
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.appcompat.widget.AppCompatButton
+import com.am.lapcart.activities.FirebaseLoginActivity
+import com.am.lapcart.activities.FirebaseRegisterActivity
+import com.am.lapcart.R
 
 class FirstActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,8 +20,8 @@ class FirstActivity : AppCompatActivity() {
             finish()
         }
 
-        val loginBtn = findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.loginBtn)
-        val registerBtn = findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.registerBtn)
+        val loginBtn = findViewById<AppCompatButton>(R.id.loginBtn)
+        val registerBtn = findViewById<AppCompatButton>(R.id.registerBtn)
 
         loginBtn.setOnClickListener {
 

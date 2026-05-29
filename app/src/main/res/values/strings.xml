@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">LapCart</string>
+    <string name="app_name">FixoFix</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    
+    <string name="login_info">Book trusted home services like AC repair, plumbing, and more — right at your doorstep.</string>
+
     <string name="default_web_client_id">
           595295529232-edufnt2jvpih0gpo8p2gl1b8b3e4io0t.apps.googleusercontent.com
     </string>

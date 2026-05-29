@@ -1,17 +1,18 @@
-package com.am.lapcart
+package com.am.lapcart.activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+import com.am.lapcart.MyApplication
+import com.am.lapcart.R
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 
 class FirebaseLoginActivity : AppCompatActivity() {
-
     lateinit var etEmail : TextInputEditText
     lateinit var etPassword : TextInputEditText
     lateinit var loginbtnFb : AppCompatButton

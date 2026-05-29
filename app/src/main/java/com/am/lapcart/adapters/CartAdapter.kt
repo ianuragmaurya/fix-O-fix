@@ -1,4 +1,4 @@
-package com.am.lapcart
+package com.am.lapcart.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.am.lapcart.models.CartModel
+import com.am.lapcart.database.DBHelper
+import com.am.lapcart.R
 import com.bumptech.glide.Glide
 
 class CartAdapter(val list: ArrayList<CartModel>, val context: Context, val listener: CartListener):

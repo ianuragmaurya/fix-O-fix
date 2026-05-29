@@ -1,12 +1,15 @@
-package com.am.lapcart
+package com.am.lapcart.activities
 
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import com.am.lapcart.models.CartModel
+import com.am.lapcart.database.DBHelper
+import com.am.lapcart.R
 import com.bumptech.glide.Glide
 import com.razorpay.Checkout
 import com.razorpay.PaymentResultListener
@@ -29,7 +32,7 @@ class ServiceDetailsActivity : AppCompatActivity(), PaymentResultListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_service_details)
 
-        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbarDetails)
+        val toolbar = findViewById<Toolbar>(R.id.toolbarDetails)
         setSupportActionBar(toolbar)
         supportActionBar?.title = "Service Details"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -130,11 +133,10 @@ class ServiceDetailsActivity : AppCompatActivity(), PaymentResultListener {
         }
 
     override fun onPaymentSuccess(razorPaymentID: String?) {
-        Toast.makeText(this, "Payment Success: $razorPaymentID",Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Payment Success: $razorPaymentID", Toast.LENGTH_LONG).show()
     }
 
     override fun onPaymentError(code: Int, response: String?) {
         Toast.makeText(this, "payment Failed: $response", Toast.LENGTH_LONG).show()
     }
 }
-

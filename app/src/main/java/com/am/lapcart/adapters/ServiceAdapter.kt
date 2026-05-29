@@ -1,4 +1,4 @@
-package com.am.lapcart
+package com.am.lapcart.adapters
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -8,6 +8,9 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.am.lapcart.R
+import com.am.lapcart.models.ServiceModel
+import com.am.lapcart.activities.ServiceDetailsActivity
 import com.bumptech.glide.Glide
 
 class ServiceAdapter(val list: ArrayList<ServiceModel>):

@@ -1,6 +1,5 @@
-package com.am.lapcart
+package com.am.lapcart.fragments
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -16,10 +15,12 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.am.lapcart.activities.FirebaseLoginActivity
+import com.am.lapcart.R
+import com.am.lapcart.activities.InfoActivity
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class ProfileFragment : Fragment() {
-
     private lateinit var imgProfile: ImageView
 
     override fun onCreateView(
@@ -124,7 +125,7 @@ class ProfileFragment : Fragment() {
                     editor.clear()
                     editor.apply()
 
-                    val intent = Intent(requireContext(), LoginActivity::class.java)
+                    val intent = Intent(requireContext(), FirebaseLoginActivity::class.java)
                     startActivity(intent)
                     requireActivity().finish()
                 }
@@ -148,7 +149,7 @@ class ProfileFragment : Fragment() {
                             editor.clear()
                             editor.apply()
 
-                            val intent = Intent(requireContext(), LoginActivity::class.java)
+                            val intent = Intent(requireContext(), FirebaseLoginActivity::class.java)
                             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                             startActivity(intent)
                         }
@@ -159,7 +160,7 @@ class ProfileFragment : Fragment() {
                 dialog.setContentView(view)
                 dialog.show()
         }
-    private val pickImageLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) {uri ->
+    private val pickImageLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
         uri?.let {
             imgProfile.setImageURI(it)
         }

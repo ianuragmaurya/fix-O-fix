@@ -1,4 +1,4 @@
-package com.am.lapcart
+package com.am.lapcart.models
 
 data class ServiceResponse(
 

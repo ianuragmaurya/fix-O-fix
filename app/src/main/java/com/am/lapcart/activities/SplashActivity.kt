@@ -1,16 +1,12 @@
-package com.am.lapcart
+package com.am.lapcart.activities
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import okhttp3.internal.http2.Http2Reader
+import com.am.lapcart.activities.FirebaseLoginActivity
+import com.am.lapcart.R
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +22,7 @@ class SplashActivity : AppCompatActivity() {
             if (!token.isNullOrEmpty()) {
                 startActivity(Intent(this, MainActivity::class.java))
             } else {
-                startActivity(Intent(this, LoginActivity::class.java))
+                startActivity(Intent(this, FirebaseLoginActivity::class.java))
             }
             finish()
 
